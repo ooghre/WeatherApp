@@ -20,10 +20,6 @@ public class NetworkCall {
         this.requestCallBack = requestCallBack;
     }
 
-    public NetworkCall(WeatherURLRequestCallBack requestCallBack) {
-        this.requestCallBack = requestCallBack;
-    }
-
     public void get(String requestURL){
         Executor executor = Executors.newSingleThreadExecutor();
         UrlRequest.Builder requestBuilder = cronetEngine.newUrlRequestBuilder( requestURL, requestCallBack, executor);
